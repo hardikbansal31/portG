@@ -9,7 +9,6 @@ import {
 } from "lucide-react";
 
 // --- Hardcoded Data ---
-// Fully updated with information from your resume
 const portfolioData = {
   name: "Hardik Bansal",
   title: "Java & Node.js Developer",
@@ -89,8 +88,8 @@ const portfolioData = {
       description:
         "Utilizes OpenStreet Map & OpenRoute service APIs to provide routing and live location tracking. Features traffic analytics for major junctions in Mumbai and includes a downloadable Android app.",
       technologies: ["MERN Stack", "Node.js", "OpenStreetMap API"],
-      link: "https://github.com/hardikbansal31/SmartCity", // Please update with your actual repository link
-      live: "https://smart-city-pi-five.vercel.app/", // Please update with your live project link
+      link: "https://github.com/hardikbansal31/SmartCity",
+      live: "https://smart-city-pi-five.vercel.app/",
     },
     {
       title: "Task Assignment App",
@@ -103,20 +102,20 @@ const portfolioData = {
         "Prisma",
         "Docker",
       ],
-      link: "https://github.com/hardikbansal31/ip", // Please update with your actual repository link
-      live: "https://ip-mocha-nine.vercel.app/", // Please update with your live demo link
+      link: "https://github.com/hardikbansal31/ip",
+      live: "https://ip-mocha-nine.vercel.app/",
     },
     {
       title: "S.O.R.T Club Website",
       description: "The club website during my tenure.",
       technologies: ["React", "JavaScript", "Bootstrap"],
-      link: "https://github.com/hardikbansal31/sort", // Please update with your actual repository link
-      live: "https://sort-mauve-zeta.vercel.app/", // Please update with your live project link
+      link: "https://github.com/hardikbansal31/sort",
+      live: "https://sort-mauve-zeta.vercel.app/",
     },
   ],
 };
 
-// --- SVG Icon Components for Floating Background ---
+// --- Floating Icons Background ---
 const TechIcons = {
   React: () => (
     <svg viewBox="-11.5 -10.23174 23 20.46348" className="w-full h-full">
@@ -162,13 +161,12 @@ const TechIcons = {
       ></path>
       <path
         fill="#38bdf8"
-        d="M10.658 15.195c.683-3.085 3.81-5.488 7.342-5.488 2.829 0 5.153 1.528 6.244 3.72l-2.04.992c-.683-1.374-2.11-2.439-4.204-2.439-2.622 0-4.947 1.76-5.634 4.219l-1.707-.004zm10.684 1.61c-.683 3.085-3.81 5.488-7.342 5.488-2.829 0-5.153-1.528-6.244-3.72l2.04-.992c.683 1.374 2.11 2.439 4.204 2.439 2.622 0 4.947-1.76 5.634-4.219l1.707.004z"
+        d="M10.658 15.195c.683-3.085 3.81-5.488 7.342-5.488 2.829 0 5.153 1.528 6.244 3.72l-2.04.992c-.683-1.374-2.11-2.439-4.204-2.439-2.622 0-4.947 1.76-5.634 4.219l-1.707-.004zm10.684 1.61c-.683 3.085-3.81 5.488-7.342 5.488-2.829 0-5.153 1.528-6.244-3.72l2.04-.992c.683 1.374 2.11 2.439 4.204 2.439 2.622 0 4.947-1.76 5.634-4.219l1.707.004z"
       ></path>
     </svg>
   ),
 };
 
-// --- Floating Icons Background Component ---
 const FloatingIconsBackground = () => {
   const icons = useMemo(() => {
     const iconKeys = Object.keys(TechIcons);
@@ -204,6 +202,10 @@ const FloatingIconsBackground = () => {
           opacity: 0.5;
           animation: float linear infinite;
           pointer-events: none;
+          will-change: transform, opacity;
+        }
+        .backdrop-blur-sm {
+          will-change: backdrop-filter;
         }
       `}</style>
       <div className="fixed top-0 left-0 w-full h-full overflow-hidden z-0">
@@ -328,7 +330,7 @@ export default function App() {
       <div className="relative z-10 min-h-screen max-w-screen-xl mx-auto px-6 md:px-12 lg:px-24">
         <div className="lg:flex lg:justify-between lg:gap-4">
           {/* Left Column: Header */}
-          <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
+          <header className="pt-12 lg:pt-24 lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
             <div>
               <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">
                 {name}
@@ -489,21 +491,6 @@ export default function App() {
             </Section>
 
             {/* Achievements Section */}
-            {/* <Section id="achievements" title="Achievements">
-              <ul className="space-y-4">
-                {achievements.map((ach, index) => (
-                  <li
-                    key={index}
-                    className="flex items-start gap-4 p-4 rounded-lg bg-slate-800/50 backdrop-blur-sm transition-all duration-300 group hover:bg-slate-800/80 hover:shadow-lg hover:shadow-teal-500/50"
-                  >
-                    <Trophy className="h-5 w-5 mt-1 text-teal-400 flex-shrink-0" />
-                    <span className="text-slate-300 group-hover:text-slate-100 transition-colors duration-300">
-                      {ach}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </Section> */}
             <Section id="achievements" title="Achievements">
               <ul className="space-y-4">
                 {achievements.map((ach, index) => (
