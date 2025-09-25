@@ -106,6 +106,13 @@ const portfolioData = {
       link: "https://github.com/hardikbansal31/ip", // Please update with your actual repository link
       live: "https://ip-mocha-nine.vercel.app/", // Please update with your live demo link
     },
+    {
+      title: "S.O.R.T Club Website",
+      description: "The club website during my tenure.",
+      technologies: ["React", "JavaScript", "Bootstrap"],
+      link: "https://github.com/hardikbansal31/sort", // Please update with your actual repository link
+      live: "https://sort-mauve-zeta.vercel.app/", // Please update with your live project link
+    },
   ],
 };
 
