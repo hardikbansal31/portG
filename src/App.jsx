@@ -433,11 +433,17 @@ export default function App() {
           <main className="pt-24 lg:w-1/2 lg:py-24">
             {/* About Section */}
             <Section id="about" title="About">
+              <h2 className="text-lg font-medium tracking-tight text-slate-200 sm:text-xl">
+                About
+              </h2>
               <p className="text-slate-300">{bio}</p>
             </Section>
 
             {/* Education Section */}
             <Section id="education" title="Education">
+              <h2 className="text-lg font-medium tracking-tight text-slate-200 sm:text-xl">
+                Education
+              </h2>
               <div className="block p-6 rounded-lg bg-slate-800/50 hover:bg-slate-800/80 backdrop-blur-sm transition-all duration-300 group hover:shadow-lg hover:shadow-teal-500/50">
                 <div className="flex justify-between items-start">
                   <div>
@@ -460,6 +466,9 @@ export default function App() {
 
             {/* Experience Section */}
             <Section id="experience" title="Experience">
+              <h2 className="text-lg font-medium tracking-tight text-slate-200 sm:text-xl">
+                Experience
+              </h2>
               <div>
                 {experience.map((item, index) => (
                   <ExperienceCard key={index} item={item} />
@@ -469,6 +478,9 @@ export default function App() {
 
             {/* Skills Section */}
             <Section id="skills" title="Skills">
+              <h2 className="text-lg font-medium tracking-tight text-slate-200 sm:text-xl">
+                Skills
+              </h2>
               <div className="flex flex-wrap gap-2">
                 {skills.map((skill) => (
                   <span
@@ -483,6 +495,9 @@ export default function App() {
 
             {/* Projects Section */}
             <Section id="projects" title="Projects">
+              <h2 className="text-lg font-medium tracking-tight text-slate-200 sm:text-xl">
+                Projects
+              </h2>
               <div>
                 {projects.map((project, index) => (
                   <ProjectCard key={index} project={project} />
@@ -492,6 +507,9 @@ export default function App() {
 
             {/* Achievements Section */}
             <Section id="achievements" title="Achievements">
+              <h2 className="text-lg font-medium tracking-tight text-slate-200 sm:text-xl">
+                Achievements
+              </h2>
               <ul className="space-y-4">
                 {achievements.map((ach, index) => (
                   <li key={index}>
