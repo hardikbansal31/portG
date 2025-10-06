@@ -92,6 +92,20 @@ const portfolioData = {
       live: "https://smart-city-pi-five.vercel.app/",
     },
     {
+      title: "Video Compression & Streaming Platform (SIH 2025)",
+      description:
+        "Backend service for compressing and streaming videos using FFmpeg (VP9 + Opus). Implements multi-resolution video generation (720p, 480p, 360p) with adaptive CRF values, REST APIs for upload and streaming with Range support, and Dockerized deployment.",
+      technologies: [
+        "Node.js",
+        "Express",
+        "FFmpeg",
+        "MySQL",
+        "Multer",
+        "Docker",
+      ],
+      link: "https://github.com/hardikbansal31/sih25-dash",
+    },
+    {
       title: "Task Assignment App",
       description:
         "A full-stack application with role-based access (Admin, User) and secure REST APIs using JWT-based authentication. The entire application is containerized with Docker for easy deployment.",
