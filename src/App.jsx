@@ -46,6 +46,16 @@ const portfolioData = {
   ],
   experience: [
     {
+      role: "AI & Full Stack Developer Intern",
+      company: "F1Jobs.io",
+      date: "December 2025 - Present",
+      description: [
+        "Built workflow automations using n8n to streamline internal and client operations.",
+        "Developed responsive portfolio websites for multiple clients.",
+        "Collaborated with mentors across time zones and delivered production-ready features.",
+      ],
+    },
+    {
       role: "Vice Chairperson",
       company: "GeeksForGeeks Student Chapter TCET",
       date: "June 2025 - Present",
@@ -65,6 +75,7 @@ const portfolioData = {
       ],
     },
   ],
+
   skills: [
     "Java",
     "JavaScript",
@@ -84,13 +95,21 @@ const portfolioData = {
   ],
   projects: [
     {
-      title: "Smart City Website",
+      title: "News Aggregation Platform",
       description:
-        "Utilizes OpenStreet Map & OpenRoute service APIs to provide routing and live location tracking. Features traffic analytics for major junctions in Mumbai and includes a downloadable Android app.",
-      technologies: ["MERN Stack", "Node.js", "OpenStreetMap API"],
-      link: "https://github.com/hardikbansal31/SmartCity",
-      live: "https://smart-city-pi-five.vercel.app/",
+        "A full-stack news aggregation platform that fetches and processes articles from multiple RSS feeds. Includes a lightweight frontend for managing topics and triggering on-demand fetches, with backend caching for performance optimization.",
+      technologies: [
+        "Node.js",
+        "Express",
+        "SQLite",
+        "Redis",
+        "RSS Parser",
+        "React",
+        "Axios",
+      ],
+      link: "https://github.com/hardikbansal31/news",
     },
+
     {
       title: "Video Compression & Streaming Platform (SIH 2025)",
       description:
@@ -104,6 +123,14 @@ const portfolioData = {
         "Docker",
       ],
       link: "https://github.com/hardikbansal31/sih25-dash",
+    },
+
+    {
+      title: "S.O.R.T Club Website",
+      description: "The club website during my tenure.",
+      technologies: ["React", "JavaScript", "Bootstrap"],
+      link: "https://github.com/hardikbansal31/sort",
+      live: "https://sort-mauve-zeta.vercel.app/",
     },
     {
       title: "Task Assignment App",
@@ -120,11 +147,12 @@ const portfolioData = {
       live: "https://ip-mocha-nine.vercel.app/",
     },
     {
-      title: "S.O.R.T Club Website",
-      description: "The club website during my tenure.",
-      technologies: ["React", "JavaScript", "Bootstrap"],
-      link: "https://github.com/hardikbansal31/sort",
-      live: "https://sort-mauve-zeta.vercel.app/",
+      title: "Smart City Website",
+      description:
+        "Utilizes OpenStreet Map & OpenRoute service APIs to provide routing and live location tracking. Features traffic analytics for major junctions in Mumbai and includes a downloadable Android app.",
+      technologies: ["MERN Stack", "Node.js", "OpenStreetMap API"],
+      link: "https://github.com/hardikbansal31/SmartCity",
+      live: "https://smart-city-pi-five.vercel.app/",
     },
   ],
 };
@@ -447,13 +475,11 @@ export default function App() {
           <main className="pt-24 lg:w-1/2 lg:py-24">
             {/* About Section */}
             <Section id="about" title="About">
-             
               <p className="text-slate-300">{bio}</p>
             </Section>
 
             {/* Education Section */}
             <Section id="education" title="Education">
-              
               <div className="block p-6 rounded-lg bg-slate-800/50 hover:bg-slate-800/80 backdrop-blur-sm transition-all duration-300 group hover:shadow-lg hover:shadow-teal-500/50">
                 <div className="flex justify-between items-start">
                   <div>
@@ -476,7 +502,6 @@ export default function App() {
 
             {/* Experience Section */}
             <Section id="experience" title="Experience">
-              
               <div>
                 {experience.map((item, index) => (
                   <ExperienceCard key={index} item={item} />
@@ -486,7 +511,6 @@ export default function App() {
 
             {/* Skills Section */}
             <Section id="skills" title="Skills">
-             
               <div className="flex flex-wrap gap-2">
                 {skills.map((skill) => (
                   <span
@@ -501,7 +525,6 @@ export default function App() {
 
             {/* Projects Section */}
             <Section id="projects" title="Projects">
-              
               <div>
                 {projects.map((project, index) => (
                   <ProjectCard key={index} project={project} />
@@ -511,7 +534,6 @@ export default function App() {
 
             {/* Achievements Section */}
             <Section id="achievements" title="Achievements">
-              
               <ul className="space-y-4">
                 {achievements.map((ach, index) => (
                   <li key={index}>
