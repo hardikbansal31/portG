@@ -8,16 +8,15 @@ import {
   Trophy,
 } from "lucide-react";
 
-// --- Hardcoded Data ---
 const portfolioData = {
   name: "Hardik Bansal",
-  title: "Java & Node.js Developer",
+  title: "Backend Developer",
   location: "Mumbai, India",
-  bio: "A passionate and driven Computer Engineering student with a love for building innovative and efficient web applications. Experienced in both Java and JavaScript ecosystems, and always eager to learn new technologies to solve real-world problems.",
+  bio: "Pre-final year Computer Engineering student (GPA 9.38) at TCET Mumbai. I build scalable backend systems — distributed video pipelines, real-time APIs, and full-stack applications — using Node.js, Java, Redis, and Docker. Currently exploring system design and backend infrastructure.",
   contact: {
     email: "bansalhardik31@gmail.com",
     github: "https://github.com/hardikbansal31",
-    linkedin: "https://www.linkedin.com/in/hardik-bansal-08aa2727a/",
+    linkedin: "https://www.linkedin.com/in/hardikbansal31/",
     phone: "9326748670",
   },
   education: {
@@ -40,102 +39,107 @@ const portfolioData = {
       link: "https://drive.google.com/file/d/1qbbrS8yl67WFu0PVs6tDHWdSCpQ76bCn/view?usp=sharing",
     },
     {
-      text: "Completed 'Java Programming Masterclass' course on Udemy.",
-      link: "https://drive.google.com/file/d/1pTvlV_ai5MCG3uBp0sWYB-_XWyUw5JYA/view?usp=sharing",
+      text: "Finalist in Statathon hackathon by MoSPI (Ministry of Statistics, Govt. of India).",
+      link: "#",
+    },
+    {
+      text: "Promoted to Vice Chairperson, GFG-TCET Student Chapter.",
+      link: "#",
     },
   ],
   experience: [
     {
       role: "AI & Full Stack Developer Intern",
       company: "F1Jobs.io",
-      date: "December 2025 - Present",
+      date: "December 2025 – January 2026",
       description: [
-        "Built workflow automations using n8n to streamline internal and client operations.",
-        "Developed responsive portfolio websites for multiple clients.",
-        "Collaborated with mentors across time zones and delivered production-ready features.",
+        "Built 5+ workflow automations using n8n, reducing manual client operations effort by an estimated 60%.",
+        "Developed and deployed 3 production-ready responsive portfolio websites for clients.",
+        "Collaborated asynchronously with mentors across time zones, consistently delivering features within sprint deadlines.",
       ],
     },
     {
       role: "Vice Chairperson",
       company: "GeeksForGeeks Student Chapter TCET",
-      date: "June 2025 - Present",
+      date: "June 2025 – Present",
       description: [
-        "Coordinating with over 20 club members for smooth operations.",
-        "Prepared an online quiz with more than 400 questions.",
+        "Leading a chapter of 20+ members, coordinating technical events and club operations.",
         "Hosted coding competitions, webinars, and seminars with speakers from top companies like Flipkart and Google.",
+        "Prepared an online quiz bank with 400+ questions for competitive programming assessments.",
       ],
     },
     {
       role: "Technical Team Member",
       company: "S.O.R.T Club of TCET",
-      date: "Oct 2024 - Mar 2025",
+      date: "Oct 2024 – Jun 2025",
       description: [
-        "Rebuilt the official S.O.R.T Club website using React.js.",
-        "Successfully migrated the site from a static HTML/CSS/JS setup to a modern, dynamic React application.",
+        "Built and maintained infrastructure for 10+ webinars, coding contests, and assessments supporting 200+ participants.",
+        "Rebuilt the S.O.R.T Club website in React.js, improving page load speed by ~40% and modernising the UI.",
       ],
     },
   ],
-
   skills: [
     "Java",
     "JavaScript",
-    "Spring Boot",
+    "Python",
     "Node.js",
+    "Spring Boot",
+    "REST APIs",
+    "Socket.IO",
+    "BullMQ",
     "React.js",
     "Next.js",
-    "MySQL",
-    "MongoDB",
-    "Prisma",
-    "Hibernate",
-    "Docker",
-    "Git & GitHub",
-    "Postman",
     "HTML & CSS",
     "Tailwind CSS",
+    "MySQL",
+    "MongoDB",
+    "PostgreSQL",
+    "SQLite",
+    "Redis",
+    "Docker",
+    "Docker Compose",
+    "FFmpeg",
+    "Git & GitHub",
+    "Postman",
+    "Linux",
+    "n8n",
   ],
   projects: [
     {
-      title: "News Aggregation Platform",
+      title: "ClassStream – Distributed Video Encoding & Streaming Platform",
       description:
-        "A full-stack news aggregation platform that fetches and processes articles from multiple RSS feeds. Includes a lightweight frontend for managing topics and triggering on-demand fetches, with backend caching for performance optimization.",
+        "Distributed video encoding pipeline supporting adaptive HLS streaming at 720p/480p/360p. Asynchronous job architecture with Redis + BullMQ workers keeps API response times under 100ms during CPU-intensive encoding. Real-time progress updates via Socket.IO eliminate client-side polling. Full multi-service stack containerised with Docker Compose.",
       technologies: [
         "Node.js",
         "Express",
-        "SQLite",
-        "Redis",
-        "RSS Parser",
         "React",
-        "Axios",
-      ],
-      link: "https://github.com/hardikbansal31/news",
-    },
-
-    {
-      title: "Video Compression & Streaming Platform (SIH 2025)",
-      description:
-        "Backend service for compressing and streaming videos using FFmpeg (VP9 + Opus). Implements multi-resolution video generation (720p, 480p, 360p) with adaptive CRF values, REST APIs for upload and streaming with Range support, and Dockerized deployment.",
-      technologies: [
-        "Node.js",
-        "Express",
-        "FFmpeg",
         "MySQL",
-        "Multer",
+        "Redis",
+        "BullMQ",
+        "FFmpeg",
+        "Socket.IO",
         "Docker",
       ],
       link: "https://github.com/hardikbansal31/sih25-dash",
     },
-
     {
-      title: "S.O.R.T Club Website",
-      description: "The club website during my tenure.",
-      technologies: ["React", "JavaScript", "Bootstrap"],
-      link: "https://github.com/hardikbansal31/sort",
-      live: "https://sort-mauve-zeta.vercel.app/",
+      title: "Smart City Website",
+      description:
+        "OpenStreetMap & OpenRoute service APIs provide real-time routing and live location tracking. Features traffic analytics for major junctions in Mumbai and includes a downloadable Android app.",
+      technologies: [
+        "Node.js",
+        "React",
+        "MongoDB",
+        "Express",
+        "OpenStreetMap API",
+      ],
+      link: "https://github.com/hardikbansal31/SmartCity",
+      live: "https://smart-city-pi-five.vercel.app/",
     },
     {
       title: "Task Assignment App",
       description:
-        "A full-stack application with role-based access (Admin, User) and secure REST APIs using JWT-based authentication. The entire application is containerized with Docker for easy deployment.",
+        "Full-stack application with role-based access control (Admin/User) and secure REST APIs using JWT authentication. Entire stack containerised with Docker for easy deployment.",
       technologies: [
         "Java (Spring Boot)",
         "Next.js",
@@ -147,12 +151,27 @@ const portfolioData = {
       live: "https://ip-mocha-nine.vercel.app/",
     },
     {
-      title: "Smart City Website",
+      title: "News Aggregation Platform",
       description:
-        "Utilizes OpenStreet Map & OpenRoute service APIs to provide routing and live location tracking. Features traffic analytics for major junctions in Mumbai and includes a downloadable Android app.",
-      technologies: ["MERN Stack", "Node.js", "OpenStreetMap API"],
-      link: "https://github.com/hardikbansal31/SmartCity",
-      live: "https://smart-city-pi-five.vercel.app/",
+        "Full-stack news aggregation platform fetching and normalising articles from 10+ RSS feeds. Redis caching reduces redundant fetches by ~70%. REST APIs serve paginated news with average response time under 80ms with cache warm.",
+      technologies: [
+        "Node.js",
+        "Express",
+        "SQLite",
+        "Redis",
+        "RSS Parser",
+        "React",
+        "Axios",
+      ],
+      link: "https://github.com/hardikbansal31/news",
+    },
+    {
+      title: "S.O.R.T Club Website",
+      description:
+        "Official club website built during my tenure as Technical Team Member. Migrated from a static HTML/CSS/JS setup to a modern React application.",
+      technologies: ["React", "JavaScript", "Bootstrap"],
+      link: "https://github.com/hardikbansal31/sort",
+      live: "https://sort-mauve-zeta.vercel.app/",
     },
   ],
 };
@@ -257,7 +276,6 @@ const FloatingIconsBackground = () => {
   );
 };
 
-// --- Reusable Components ---
 const IconLink = ({ href, Icon, "aria-label": ariaLabel }) => (
   <a
     href={href}
@@ -344,7 +362,6 @@ const ProjectCard = ({ project }) => (
   </div>
 );
 
-// --- Main App Component ---
 export default function App() {
   const {
     name,
@@ -361,9 +378,7 @@ export default function App() {
 
   const handleNavClick = (e, targetId) => {
     e.preventDefault();
-    document.getElementById(targetId).scrollIntoView({
-      behavior: "smooth",
-    });
+    document.getElementById(targetId).scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -371,7 +386,6 @@ export default function App() {
       <FloatingIconsBackground />
       <div className="relative z-10 min-h-screen max-w-screen-xl mx-auto px-6 md:px-12 lg:px-24">
         <div className="lg:flex lg:justify-between lg:gap-4">
-          {/* Left Column: Header */}
           <header className="pt-12 lg:pt-24 lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
             <div>
               <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">
@@ -381,72 +395,32 @@ export default function App() {
                 {title}
               </h2>
               <p className="mt-4 max-w-xs leading-normal">{location}</p>
-
-              {/* Navigation */}
               <nav
                 className="hidden lg:block mt-12"
                 aria-label="In-page navigation"
               >
                 <ul className="flex flex-col space-y-4">
-                  <li>
-                    <a
-                      href="#about"
-                      onClick={(e) => handleNavClick(e, "about")}
-                      className="font-bold text-slate-300 hover:text-slate-100 transition-colors duration-300"
-                    >
-                      About
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#education"
-                      onClick={(e) => handleNavClick(e, "education")}
-                      className="font-bold text-slate-300 hover:text-slate-100 transition-colors duration-300"
-                    >
-                      Education
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#experience"
-                      onClick={(e) => handleNavClick(e, "experience")}
-                      className="font-bold text-slate-300 hover:text-slate-100 transition-colors duration-300"
-                    >
-                      Experience
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#skills"
-                      onClick={(e) => handleNavClick(e, "skills")}
-                      className="font-bold text-slate-300 hover:text-slate-100 transition-colors duration-300"
-                    >
-                      Skills
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#projects"
-                      onClick={(e) => handleNavClick(e, "projects")}
-                      className="font-bold text-slate-300 hover:text-slate-100 transition-colors duration-300"
-                    >
-                      Projects
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#achievements"
-                      onClick={(e) => handleNavClick(e, "achievements")}
-                      className="font-bold text-slate-300 hover:text-slate-100 transition-colors duration-300"
-                    >
-                      Achievements
-                    </a>
-                  </li>
+                  {[
+                    "about",
+                    "education",
+                    "experience",
+                    "skills",
+                    "projects",
+                    "achievements",
+                  ].map((id) => (
+                    <li key={id}>
+                      <a
+                        href={`#${id}`}
+                        onClick={(e) => handleNavClick(e, id)}
+                        className="font-bold text-slate-300 hover:text-slate-100 transition-colors duration-300 capitalize"
+                      >
+                        {id.charAt(0).toUpperCase() + id.slice(1)}
+                      </a>
+                    </li>
+                  ))}
                 </ul>
               </nav>
             </div>
-
-            {/* Social Icons */}
             <div className="flex items-center gap-6 mt-8">
               <IconLink
                 href={contact.github}
@@ -471,14 +445,11 @@ export default function App() {
             </div>
           </header>
 
-          {/* Right Column: Main Content */}
           <main className="pt-24 lg:w-1/2 lg:py-24">
-            {/* About Section */}
             <Section id="about" title="About">
               <p className="text-slate-300">{bio}</p>
             </Section>
 
-            {/* Education Section */}
             <Section id="education" title="Education">
               <div className="block p-6 rounded-lg bg-slate-800/50 hover:bg-slate-800/80 backdrop-blur-sm transition-all duration-300 group hover:shadow-lg hover:shadow-teal-500/50">
                 <div className="flex justify-between items-start">
@@ -500,16 +471,12 @@ export default function App() {
               </div>
             </Section>
 
-            {/* Experience Section */}
             <Section id="experience" title="Experience">
-              <div>
-                {experience.map((item, index) => (
-                  <ExperienceCard key={index} item={item} />
-                ))}
-              </div>
+              {experience.map((item, index) => (
+                <ExperienceCard key={index} item={item} />
+              ))}
             </Section>
 
-            {/* Skills Section */}
             <Section id="skills" title="Skills">
               <div className="flex flex-wrap gap-2">
                 {skills.map((skill) => (
@@ -523,16 +490,12 @@ export default function App() {
               </div>
             </Section>
 
-            {/* Projects Section */}
             <Section id="projects" title="Projects">
-              <div>
-                {projects.map((project, index) => (
-                  <ProjectCard key={index} project={project} />
-                ))}
-              </div>
+              {projects.map((project, index) => (
+                <ProjectCard key={index} project={project} />
+              ))}
             </Section>
 
-            {/* Achievements Section */}
             <Section id="achievements" title="Achievements">
               <ul className="space-y-4">
                 {achievements.map((ach, index) => (
@@ -553,7 +516,6 @@ export default function App() {
               </ul>
             </Section>
 
-            {/* Footer */}
             <footer className="text-center text-sm text-slate-500 py-8"></footer>
           </main>
         </div>
