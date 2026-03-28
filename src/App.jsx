@@ -106,6 +106,24 @@ const portfolioData = {
   ],
   projects: [
     {
+      title: "LedgerFlow – High-Concurrency Banking Core & Distributed Ledger",
+      description:
+        "High-performance double-entry accounting engine ensuring atomic ledger integrity with immutable (DEBIT/CREDIT) transaction rows. Engineered a sophisticated three-layer concurrency strategy—integrating Redisson distributed locks, pessimistic SQL locking, and JPA optimistic versioning—to eliminate race conditions and double-spending. Features enterprise-grade security with JWT/Redis token revocation, Quartz-automated recurring payments, and deep system observability via custom Micrometer metrics and Spring Actuator.",
+      technologies: [
+        "Java 21",
+        "Spring Boot",
+        "MySQL",
+        "Redis",
+        "Redisson",
+        "Quartz",
+        "Micrometer",
+        "JWT",
+        "React",
+        "Vite",
+      ],
+      link: "https://github.com/hardikbansal31/banking-ledger",
+    },
+    {
       title: "ClassStream – Distributed Video Encoding & Streaming Platform",
       description:
         "Distributed video encoding pipeline supporting adaptive HLS streaming at 720p/480p/360p. Asynchronous job architecture with Redis + BullMQ workers keeps API response times under 100ms during CPU-intensive encoding. Real-time progress updates via Socket.IO eliminate client-side polling. Full multi-service stack containerised with Docker Compose.",
