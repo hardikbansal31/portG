@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Not Found | Hardik Bansal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --white: #FAFAF8;
+      --navy: #0F1F3D;
+      --orange: #E8620A;
+      --muted: #6B7A8D;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body: 'DM Sans', -apple-system, sans-serif;
+    }
+    
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--white);
+      color: var(--navy);
+      font-family: var(--font-body);
+      text-align: center;
+    }
+
+    .error-code {
+      font-family: var(--font-display);
+      font-size: 8rem;
+      font-weight: 700;
+      margin: 0;
+      line-height: 1;
+      color: rgba(15, 31, 61, 0.08); /* Watermark style */
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: var(--muted);
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.8rem 1.5rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--white);
+      background-color: var(--navy);
+      border: 1.5px solid var(--navy);
+      border-radius: 4px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    a:hover {
+      background-color: transparent;
+      color: var(--navy);
+    }
+  </style>
+</head>
+<body>
+  <div class="error-code">404</div>
+  <div class="content">
+    <h1>Lost in the Architecture</h1>
+    <p>The page you are looking for does not exist or has been moved.</p>
+    <a href="/">Return to Portfolio</a>
+  </div>
+</body>
+</html>
