@@ -1,12 +1,30 @@
-# React + Vite
+# Hardik Bansal — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A minimalist, editorial-style personal portfolio showcasing my work as a Backend Developer. Built with React, Vite, and custom vanilla CSS.
 
-Currently, two official plugins are available:
+## Features
+- **Editorial Design**: Typography-driven design using Playfair Display, DM Sans, and JetBrains Mono.
+- **Scroll Animations**: Custom IntersectionObserver hooks for smooth scroll reveals and SVG timeline drawing.
+- **PWA Ready**: Fully installable as a Progressive Web App with offline caching.
+- **Custom Cursor**: Interactive navy/orange lerp cursor.
+- **Data-Driven**: All content is managed cleanly through a single `src/data/portfolio.js` file.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Running Locally
 
-## Expanding the ESLint configuration
+1. Install the dependencies:
+```bash
+npm install
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+2. Start the development server:
+```bash
+npm run dev
+```
+
+3. Build for production:
+```bash
+npm run build
+```
+
+## Customization
+To update the portfolio content (bio, skills, projects, resume link), simply edit the `src/data/portfolio.js` file.
