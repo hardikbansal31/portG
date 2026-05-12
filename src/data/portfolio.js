@@ -8,7 +8,7 @@ export const portfolioData = {
     github: "https://github.com/hardikbansal31",
     linkedin: "https://www.linkedin.com/in/hardikbansal31/",
     phone: "9326748670",
-    resume: "#",
+    resume: "https://docs.google.com/document/d/1q0GPEB17HUhQ3WuqGMHHW1sKz9Rxgq64x63AxuKQpHM/export?format=pdf",
   },
   education: {
     degree: "B.E. Computer Engineering",
