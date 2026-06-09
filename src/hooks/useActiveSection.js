@@ -10,30 +10,32 @@ export function useActiveSection(sectionIds = []) {
   useEffect(() => {
     if (sectionIds.length === 0) return;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        // Find the entry with the highest intersection ratio
-        const visible = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+    const handleScroll = () => {
+      const targetPoint = window.innerHeight / 3; // Active point is top 33% of viewport
 
-        if (visible.length > 0) {
-          setActiveSection(visible[0].target.id);
+      let currentActive = activeSection;
+
+      for (const id of sectionIds) {
+        const el = document.getElementById(id);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= targetPoint && rect.bottom >= targetPoint) {
+            currentActive = id;
+            break;
+          }
         }
-      },
-      {
-        threshold: [0.1, 0.3, 0.5],
-        rootMargin: '-10% 0px -60% 0px',
       }
-    );
 
-    sectionIds.forEach((id) => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
-    });
+      if (currentActive !== activeSection) {
+        setActiveSection(currentActive);
+      }
+    };
 
-    return () => observer.disconnect();
-  }, [sectionIds]);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll(); // Initial check
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [sectionIds, activeSection]);
 
   return activeSection;
 }

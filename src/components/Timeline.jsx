@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 
 export default function Timeline({ experience }) {
-  const sectionRef = useRef(null);
-  const lineRef = useRef(null);
+  const sectionRef = useScrollReveal();
   const [lineProgress, setLineProgress] = useState(0);
   const [visibleEntries, setVisibleEntries] = useState(new Set());
 
@@ -59,27 +59,11 @@ export default function Timeline({ experience }) {
       <p className="section-label reveal">Experience</p>
 
       <div className="timeline">
-        {/* SVG line */}
         <div className="timeline-line-container">
-          <svg
-            ref={lineRef}
-            width="2"
-            height="100%"
-            className="timeline-line"
-            style={{ display: 'block' }}
-          >
-            <line
-              x1="1"
-              y1="0"
-              x2="1"
-              y2="100%"
-              stroke="var(--orange)"
-              strokeWidth="2"
-              strokeDasharray="1000"
-              strokeDashoffset={1000 - 1000 * lineProgress}
-              style={{ transition: 'stroke-dashoffset 0.1s ease' }}
-            />
-          </svg>
+          <div
+            className="timeline-line-active"
+            style={{ transform: `scaleY(${lineProgress})` }}
+          />
         </div>
 
         {experience.map((item, index) => (

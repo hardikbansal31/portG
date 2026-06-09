@@ -4,6 +4,18 @@ import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const INITIAL_COUNT = 3;
 
+function formatDescPoint(text) {
+  const match = text.match(/^\*\*(.*?)\*\*:\s*(.*)/);
+  if (match) {
+    return (
+      <>
+        <strong>{match[1]}</strong>: {match[2]}
+      </>
+    );
+  }
+  return text;
+}
+
 export default function Projects({ projects }) {
   const [expanded, setExpanded] = useState(false);
   const containerRef = useScrollReveal({}, [expanded]);
@@ -22,7 +34,21 @@ export default function Projects({ projects }) {
             className={`project-card reveal reveal-delay-${(index % 4) + 1}`}
           >
             <h3 className="project-title">{project.title}</h3>
-            <p className="project-desc">{project.description}</p>
+            {project.subtitle && (
+              <p className="project-subtitle">{project.subtitle}</p>
+            )}
+
+            {Array.isArray(project.description) ? (
+              <ul className="project-desc-list">
+                {project.description.map((point, i) => (
+                  <li key={i} className="project-desc-item">
+                    {formatDescPoint(point)}
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p className="project-desc">{project.description}</p>
+            )}
 
             <div className="project-tags">
               {project.technologies.map((tech) => (

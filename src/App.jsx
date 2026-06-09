@@ -4,7 +4,6 @@ import { portfolioData } from './data/portfolio';
 import { useActiveSection } from './hooks/useActiveSection';
 import CustomCursor from './components/CustomCursor';
 import Hero from './components/Hero';
-import About from './components/About';
 import Timeline from './components/Timeline';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
@@ -12,7 +11,6 @@ import Education from './components/Education';
 import Achievements from './components/Achievements';
 
 const NAV_SECTIONS = [
-  { id: 'about', label: 'About' },
   { id: 'experience', label: 'Experience' },
   { id: 'projects', label: 'Projects' },
   { id: 'skills', label: 'Skills' },
@@ -120,7 +118,6 @@ export default function App() {
 
       {/* Scrollable Main Content */}
       <main className="main-content">
-        <About bio={portfolioData.bio} />
         <Timeline experience={portfolioData.experience} />
         <Projects projects={portfolioData.projects} />
         <Skills skills={portfolioData.skills} />

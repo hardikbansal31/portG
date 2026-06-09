@@ -2,7 +2,7 @@ export const portfolioData = {
   name: "Hardik Bansal",
   title: "Backend Developer",
   location: "Mumbai, India",
-  bio: "Pre-final year Computer Engineering student (GPA 9.38) at TCET Mumbai. I build scalable backend systems — distributed video pipelines, real-time APIs, and full-stack applications — using Node.js, Java, Redis, and Docker. Currently exploring system design and backend infrastructure.",
+  bio: "Final year Computer Engineering student (GPA 9.23) at TCET Mumbai. I build scalable backend systems — distributed video pipelines, real-time APIs, and full-stack applications — using Node.js, Java, Redis, and Docker. Currently exploring system design and backend infrastructure.",
   contact: {
     email: "bansalhardik31@gmail.com",
     github: "https://github.com/hardikbansal31",
@@ -14,7 +14,7 @@ export const portfolioData = {
     degree: "B.E. Computer Engineering",
     college: "Thakur College of Engineering & Technology (TCET), Mumbai",
     date: "2023 - 2027 (Expected)",
-    cgpi: "9.38",
+    cgpi: "9.23",
   },
   achievements: [
     {
@@ -40,13 +40,24 @@ export const portfolioData = {
   ],
   experience: [
     {
+      role: "ML Research Intern",
+      company: "Sequretek",
+      date: "Apr 2026 – Present",
+      description: [
+        "Engineered an XDR Multi-Telemetry Correlation Engine in Python (DBSCAN, sentence-transformers), achieving an 88% alert clustering rate across 100K+ security events.",
+        "Developed a custom distance metric (semantic, temporal, entity overlap) to reduce alert fatigue, filtering out 12% of events as uncorrelated noise.",
+        "Mapped clustered telemetry to the MITRE ATT&CK framework to reconstruct attack chains and automate prioritization of high-severity threats.",
+        "Designed dashboards mapping incident timelines and blast radiuses across ~30 compromised hosts and 800+ affected users.",
+      ],
+    },
+    {
       role: "AI & Full Stack Developer Intern",
       company: "F1Jobs.io",
       date: "Dec 2025 – Jan 2026",
       description: [
-        "Built 5+ workflow automations using n8n, reducing manual client operations effort by an estimated 60%.",
-        "Developed and deployed 3 production-ready responsive portfolio websites for clients.",
-        "Collaborated asynchronously with mentors across time zones, consistently delivering features within sprint deadlines.",
+        "Automated Instagram scraping with n8n across 500+ accounts, extracting lead contact details and niche metadata from hashtag feeds.",
+        "Replaced manual lead generation workflows with an automated, structured data pipeline.",
+        "Built and deployed 3 responsive, client-ready portfolio websites optimizing speed and cross-device compatibility.",
       ],
     },
     {
@@ -96,37 +107,66 @@ export const portfolioData = {
   },
   projects: [
     {
+      title: "Project NARAD (National Automated Response & Data System)",
+      subtitle: "End-to-End E-Governance Data Collection Platform (MoSPI Statathon 2025)",
+      description: [
+        "**AI Survey Generator**: Multi-agent LangChain pipeline with automated survey drafting, 11-language translation, and Sarvam AI text-to-speech.",
+        "**Multi-Channel Delivery**: Surveys delivered via Web, Telegram/WhatsApp bots, and Twilio IVR calls with automated speech-to-text response parsing.",
+        "**Core API & Security**: High-volume ingestion supporting geospatial metadata (LGD/NIC/NSS) and Role-Based Access Control (RBAC).",
+        "**Admin Console**: React/Vite dashboard providing real-time analytics, demographic targeting, data masking, and PDF report generation.",
+        "Delivered a highly scalable digital solution enabling inclusive, national-scale data collection.",
+      ],
+      technologies: [
+        "Node.js",
+        "React",
+        "MongoDB",
+        "Redis",
+        "Docker",
+        "LangChain",
+        "Sarvam AI",
+        "Twilio",
+      ],
+      link: "#",
+    },
+    {
       title: "LedgerFlow – High-Concurrency Banking Core & Distributed Ledger",
-      description:
-        "High-performance double-entry accounting engine ensuring atomic ledger integrity with immutable (DEBIT/CREDIT) transaction rows. Engineered a sophisticated three-layer concurrency strategy—integrating Redisson distributed locks, pessimistic SQL locking, and JPA optimistic versioning—to eliminate race conditions and double-spending. Features enterprise-grade security with JWT/Redis token revocation, Quartz-automated recurring payments, and deep system observability via custom Micrometer metrics and Spring Actuator.",
+      subtitle: "Production-Grade Financial Backend Engine",
+      description: [
+        "**Double-Entry Ledger**: Atomic accounting engine enforcing strict state transitions to guarantee zero financial ledger anomalies.",
+        "**Concurrency Control**: Three-tier safety net utilizing Redisson distributed locks, pessimistic SQL locks, and JPA versioning to block double-spending.",
+        "**Security & Ops**: JWT authorization with Redis blacklist token revocation, custom Micrometer metrics, and MDC tracing.",
+        "Implements enterprise-grade fault tolerance and secure financial transaction processing.",
+      ],
       technologies: [
         "Java 21",
         "Spring Boot",
-        "MySQL",
+        "React",
         "Redis",
         "Redisson",
+        "Spring Security",
         "Quartz",
-        "Micrometer",
-        "JWT",
-        "React",
-        "Vite",
+        "Docker Compose",
       ],
       link: "https://github.com/hardikbansal31/banking-ledger",
     },
     {
       title: "ClassStream – Distributed Video Encoding & Streaming Platform",
-      description:
-        "Distributed video encoding pipeline supporting adaptive HLS streaming at 720p/480p/360p. Asynchronous job architecture with Redis + BullMQ workers keeps API response times under 100ms during CPU-intensive encoding. Real-time progress updates via Socket.IO eliminate client-side polling. Full multi-service stack containerised with Docker Compose.",
+      subtitle: "Scalable Educational Platform with Adaptive Bitrate Streaming",
+      description: [
+        "**Asynchronous Encoding**: Offloaded video compression to Redis-backed BullMQ background workers, keeping API latency under 100ms.",
+        "**Adaptive HLS Streaming**: Integrated FFmpeg to transcode video uploads into 720p/480p/360p HLS streams for dynamic quality adjustments.",
+        "**Real-Time Telemetry**: Used Socket.IO WebSockets to stream live transcoding progress directly to client browsers.",
+        "Delivered scalable media processing and a buffer-free, adaptive video streaming experience.",
+      ],
       technologies: [
         "Node.js",
-        "Express",
         "React",
         "MySQL",
         "Redis",
         "BullMQ",
-        "FFmpeg",
         "Socket.IO",
-        "Docker",
+        "FFmpeg",
+        "Docker Compose",
       ],
       link: "https://github.com/hardikbansal31/sih25-dash",
     },
